@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | Fabiana Gomes Personal Trainer</title>
+    <meta name="description"
+        content="Entre em contato com Fabiana Gomes e agende sua avaliação para dar o primeiro passo na sua transformação.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-header-padding {
+            padding-top: 120px;
+        }
+
+        .contact-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--clr-black-lighter);
+            padding: 3rem;
+            border-radius: 8px;
+            border: 1px solid rgba(157, 78, 221, 0.2);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--clr-text-light);
+            font-weight: 500;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            color: var(--clr-text-light);
+            font-family: var(--font-body);
+            transition: var(--transition-base);
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--clr-purple-neon);
+            background: rgba(157, 78, 221, 0.05);
+        }
+
+        textarea.form-input {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* Corrigir visibilidade das opções no select (texto branco no fundo branco padrão do OS) */
+        select option {
+            color: #000;
+            background: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header / Navigation -->
+    <header class="header scrolled">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">FABIANA<span> GOMES</span></a>
+            <nav>
+                <button class="mobile-menu-btn" aria-label="Abrir menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="metodo.html">Método</a></li>
+                    <li><a href="programas.html">Programas</a></li>
+                    <li><a href="resultados.html">Resultados</a></li>
+                    <li><a href="contato.html" style="color: var(--clr-purple-neon);">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTACT FORM SECTION -->
+    <section class="section page-header-padding"
+        style="text-align: center; min-height: 80vh; display: flex; align-items: center;">
+        <div class="container reveal" style="width: 100%;">
+            <h2 style="margin-bottom: 1.5rem;">Pronto para transformar sua vida?</h2>
+            <p style="margin-bottom: 3rem;">Preencha o formulário abaixo ou chame diretamente no WhatsApp.</p>
+
+            <div class="contact-container">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label class="form-label" for="name">Nome Completo</label>
+                        <input type="text" id="name" class="form-input" placeholder="Seu nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="email">E-mail</label>
+                        <input type="email" id="email" class="form-input" placeholder="seu@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="objective">Objetivo Principal</label>
+                        <select id="objective" class="form-input" style="appearance: none;">
+                            <option value="emagrecimento">Emagrecimento</option>
+                            <option value="hipertrofia">Hipertrofia</option>
+                            <option value="premium">Personalizado Premium</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="message">Mensagem (opcional)</label>
+                        <textarea id="message" class="form-input"
+                            placeholder="Conte-me um pouco sobre sua rotina atual..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Enviar e
+                        Agendar</button>
+                </form>
+            </div>
+
+            <div class="social-links" style="margin-top: 4rem;">
+                <a href="https://wa.me/5567991669607" aria-label="WhatsApp" style="font-size: 2.5rem; margin: 0 1rem;"><i
+                        class="fab fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/fabyfit2024?igsh=YjU0dXQwbW55MXZ2" aria-label="Instagram" style="font-size: 2.5rem; margin: 0 1rem;"><i
+                        class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer style="border-top: none; background: transparent;">
+        <div class="container reveal">
+            <p style="font-size: 0.9rem; color: #666;">&copy; 2026 Fabiana Gomes Personal Trainer. Todos os direitos
+                reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const btnSubmit = this.querySelector('button[type="submit"]');
+            const originalBtnText = btnSubmit.innerText;
+            btnSubmit.innerText = 'Enviando...';
+            btnSubmit.disabled = true;
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const selectEl = document.getElementById('objective');
+            const objectiveInfo = selectEl.options[selectEl.selectedIndex].text;
+            const message = document.getElementById('message').value;
+
+            // ===== CONFIGURAÇÃO DE ENVIO AUTÔNOMO =====
+            // Como o site não tem um servidor próprio (backend), usamos uma API gratuita famosa chamada Web3Forms
+            // Você precisará gerar uma chave gratuita em https://web3forms.com/ informando seu email lperalta13@gmail.com
+            const web3FormsAccessKey = 'c19cbdd5-9409-4cfb-bc4d-8867df657f8c';
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    access_key: web3FormsAccessKey,
+                    subject: 'Nova Solicitação de Avaliação: ' + name,
+                    from_name: name,
+                    email: email,
+                    message: `Objetivo: ${objectiveInfo}\n\nMensagem: ${message || 'Nenhuma mensagem adicional informada.'}`
+                })
+            })
+                .then(async (response) => {
+                    let json = await response.json();
+                    if (response.status == 200) {
+                        alert('Sua solicitação foi enviada com sucesso! Entraremos em contato em breve.');
+                        document.getElementById('contactForm').reset();
+                    } else {
+                        console.log(response);
+                        alert('Erro ao enviar. Por favor, verifique se você colocou a sua Access Key no código do site.');
+                    }
+                })
+                .catch(error => {
+                    console.log(error);
+                    alert('Erro ao enviar. Tente novamente mais tarde ou use nosso WhatsApp.');
+                })
+                .finally(() => {
+                    btnSubmit.innerText = originalBtnText;
+                    btnSubmit.disabled = false;
+                });
+        });
+    </script>
+</body>
+
+</html>
