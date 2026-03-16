@@ -1,6 +1,8 @@
 {
+  "id": "/",
   "name": "Fabiana Gomes - Acompanhamento Premium",
   "short_name": "Fabiana Gomes",
+  "description": "Treinamento personalizado de alto impacto para sua transformação física.",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -19,5 +21,6 @@
   "background_color": "#000000",
   "display": "standalone",
   "start_url": "/",
+  "scope": "/",
   "orientation": "portrait"
 }

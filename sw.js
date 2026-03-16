@@ -8,7 +8,9 @@ const ASSETS = [
     '/favicon.svg',
     '/favicon-96x96.png',
     '/apple-touch-icon.png',
-    '/site.webmanifest'
+    '/site.webmanifest',
+    '/web-app-manifest-192x192.png',
+    '/web-app-manifest-512x512.png'
 ];
 
 // Instalação do Service Worker e Cache de Assets
