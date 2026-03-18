@@ -1,4 +1,4 @@
-const CACHE_NAME = 'fabiana-gomes-v1';
+const CACHE_NAME = 'fabiana-gomes-v2';
 const ASSETS = [
     '/',
     '/index.html',
@@ -15,6 +15,8 @@ const ASSETS = [
 
 // Instalação do Service Worker e Cache de Assets
 self.addEventListener('install', event => {
+    // Força o Service Worker a se tornar ativo imediatamente
+    self.skipWaiting();
     event.waitUntil(
         caches.open(CACHE_NAME).then(cache => {
             return cache.addAll(ASSETS);
@@ -24,6 +26,8 @@ self.addEventListener('install', event => {
 
 // Ativação e limpeza de caches antigos
 self.addEventListener('activate', event => {
+    // Permite que o Service Worker controle as páginas abertas imediatamente
+    event.waitUntil(clients.claim());
     event.waitUntil(
         caches.keys().then(cacheNames => {
             return Promise.all(
